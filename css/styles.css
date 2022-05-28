@@ -1,7 +1,7 @@
-.box{border-right: 1px solid black; border-top: 1px solid black; color: white; display: inline-block; height: 3em; width: 3em; background: white;}
-.row{height: 3em;}
+.box{border-right: 1px solid black; border-top: 1px solid black; color: white; display: inline-block; background: white;}
+.row{height: }
 .row:last-child > .box{border-bottom:1px solid black;}
-#main{width: 100%;margin-top: 1em; display: inline-block; text-align: center;}
+#main{width: 960px; height: 960px; margin-top: 1em; display: contents; text-align: center;}
 .box:first-child{border-left: 1px solid black;}
 .topButton{width: 100%; text-align: center;}
 .blockBtn{width: 12em; height: 2em; background: lightblue; font-size: 36px; font-family: Roboto; color: white;}

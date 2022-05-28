@@ -23,10 +23,13 @@
                     //container.innerHTML = '';
                     for(r = 0; r < blocks; r++){
                     let row = document.createElement('div');
+                    row.style.height = 960 / blocks + "px";
                     row.className = "row";
                         for(b = 0; b < blocks; b++){
                             let box = document.createElement('div');
                             box.className = "box";
+                            box.style.width = 960/blocks + "px";
+                            box.style.height = 960/blocks + "px";
                             row.appendChild(box);
                             box.addEventListener("mouseover", function(){
                                 boxColor(box)
