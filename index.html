@@ -7,7 +7,7 @@
     <body>
         <header>
         </header>
-
+        <button onclick="rowCount()">Click me!</button>
         <div id="main">
 
         </div>
@@ -15,6 +15,8 @@
         <footer>
             <script>
                 function makeBlocks(blocks){
+                    //let container = document.getSelector('#main');
+                    //container.innerHTML = '';
                     for(r = 0; r < blocks; r++){
                     let row = document.createElement('div');
                     row.className = "row";
@@ -22,17 +24,26 @@
                             let box = document.createElement('div');
                             box.className = "box";
                             row.appendChild(box);
-                            box.addEventListener("mouseenter", boxColor(box));
+                            box.addEventListener("mouseover", function(){
+                                boxColor(box)
+                            });
                         }
                         document.getElementById('main').appendChild(row);
                     }
                 }
-                makeBlocks(24);
+                makeBlocks(16);
 
                 function boxColor(box){
-            
+                   box.style.background = 'blue';
                 }
-
+                function rowCount(){
+                    let squares = prompt("How many squares wide?");
+                    if(squares != null){
+                        let container = document.getElementById('main');
+                        container.textContent = '';
+                        makeBlocks(squares);
+                    }
+                }
             </script>
         </footer>
     </body>
