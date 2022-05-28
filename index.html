@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" defer src="js/scripts.js"></script>
+        <script type="text/css" src="css/styles.css"></script>
+    </head>
+    <body>
+        <header>
+        </header>
+
+        <div id="main">
+
+        </div>
+
+        <footer>
+            <script>
+                const container = document.querySelector('#main');
+                
+                let boxes = [];
+                for(i = 0; i < 16; i++){
+                    boxes[i] = document.createElement('div');
+                    boxes.classList.add('box[i]');
+                    boxes.classList.add('box-grid');
+                }
+
+                boxes.forEach((box) => {
+                    container.appendChild(box);
+                }
+                ) 
+
+            </script>
+        </footer>
+    </body>
+</html>
