@@ -1,5 +1,6 @@
 .box{border-right: 1px solid black; border-top: 1px solid black; color: white; display: inline-block; height: 3em; width: 3em;}
 .row{height: 3em;}
 .row:last-child > .box{border-bottom:1px solid black;}
-#main{width: 100%;}
+#main{width: 100%;margin-top: 50px;}
 .box:first-child{border-left: 1px solid black;}
+.blockBtn{position: absolute; top: 10px; margin-bottom:150px;width: 25%; background: green; color: white; border: 0px; margin: 0 auto; text-align: center;}

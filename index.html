@@ -6,8 +6,8 @@
     </head>
     <body>
         <header>
+            <button class="blockBtn" onclick="rowCount()">Click me!</button>
         </header>
-        <button onclick="rowCount()">Click me!</button>
         <div id="main">
 
         </div>
@@ -32,16 +32,19 @@
                     }
                 }
                 makeBlocks(16);
-
+        
                 function boxColor(box){
-                   box.style.background = 'blue';
+                   const randomColor = Math.floor(Math.random()*16777215).toString(16);
+                   box.style.backgroundColor = "#" + randomColor;
                 }
                 function rowCount(){
                     let squares = prompt("How many squares wide?");
-                    if(squares != null){
+                    if(squares != null && squares <= 100){
                         let container = document.getElementById('main');
                         container.textContent = '';
                         makeBlocks(squares);
+                    } else{
+                        alert("Please enter a number between 1-100!")
                     }
                 }
             </script>
