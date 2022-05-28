@@ -2,7 +2,7 @@
 <html>
     <head>
         <script type="text/javascript" defer src="js/scripts.js"></script>
-        <script type="text/css" src="css/styles.css"></script>
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <header>
@@ -14,19 +14,24 @@
 
         <footer>
             <script>
-                const container = document.querySelector('#main');
-                
-                let boxes = [];
-                for(i = 0; i < 16; i++){
-                    boxes[i] = document.createElement('div');
-                    boxes.classList.add('box[i]');
-                    boxes.classList.add('box-grid');
+                function makeBlocks(blocks){
+                    for(r = 0; r < blocks; r++){
+                    let row = document.createElement('div');
+                    row.className = "row";
+                        for(b = 0; b < blocks; b++){
+                            let box = document.createElement('div');
+                            box.className = "box";
+                            row.appendChild(box);
+                            box.addEventListener("mouseenter", boxColor(box));
+                        }
+                        document.getElementById('main').appendChild(row);
+                    }
                 }
+                makeBlocks(24);
 
-                boxes.forEach((box) => {
-                    container.appendChild(box);
+                function boxColor(box){
+            
                 }
-                ) 
 
             </script>
         </footer>
